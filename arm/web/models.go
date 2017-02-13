@@ -1193,10 +1193,10 @@ type DeletedSiteProperties struct {
 	State                     *string                    `json:"state,omitempty"`
 	HostNames                 *[]string                  `json:"hostNames,omitempty"`
 	RepositorySiteName        *string                    `json:"repositorySiteName,omitempty"`
-	UsageState                UsageState                 `json:"usageState,omitempty"`
+	UsageState                *int32                     `json:"usageState,omitempty"`
 	Enabled                   *bool                      `json:"enabled,omitempty"`
 	EnabledHostNames          *[]string                  `json:"enabledHostNames,omitempty"`
-	AvailabilityState         SiteAvailabilityState      `json:"availabilityState,omitempty"`
+	AvailabilityState         *int32                     `json:"availabilityState,omitempty"`
 	HostNameSslStates         *[]HostNameSslState        `json:"hostNameSslStates,omitempty"`
 	ServerFarmID              *string                    `json:"serverFarmId,omitempty"`
 	LastModifiedTimeUtc       *date.Time                 `json:"lastModifiedTimeUtc,omitempty"`
@@ -1609,7 +1609,7 @@ func (client HostNameBindingCollection) HostNameBindingCollectionPreparer() (*ht
 // HostNameSslState is object that represents a SSL-enabled host name.
 type HostNameSslState struct {
 	Name       *string  `json:"name,omitempty"`
-	SslState   SslState `json:"sslState,omitempty"`
+	SslState   *int32   `json:"sslState,omitempty"`
 	VirtualIP  *string  `json:"virtualIP,omitempty"`
 	Thumbprint *string  `json:"thumbprint,omitempty"`
 	ToUpdate   *bool    `json:"toUpdate,omitempty"`
@@ -2123,7 +2123,7 @@ type ServerFarmWithRichSku struct {
 type ServerFarmWithRichSkuProperties struct {
 	Name                      *string                    `json:"name,omitempty"`
 	WorkerTierName            *string                    `json:"workerTierName,omitempty"`
-	Status                    StatusOptions              `json:"status,omitempty"`
+	Status                    *int32                     `json:"status,omitempty"`
 	Subscription              *string                    `json:"subscription,omitempty"`
 	AdminSiteName             *string                    `json:"adminSiteName,omitempty"`
 	HostingEnvironmentProfile *HostingEnvironmentProfile `json:"hostingEnvironmentProfile,omitempty"`
@@ -2159,10 +2159,10 @@ type SiteProperties struct {
 	State                     *string                    `json:"state,omitempty"`
 	HostNames                 *[]string                  `json:"hostNames,omitempty"`
 	RepositorySiteName        *string                    `json:"repositorySiteName,omitempty"`
-	UsageState                UsageState                 `json:"usageState,omitempty"`
+	UsageState                *int32                     `json:"usageState,omitempty"`
 	Enabled                   *bool                      `json:"enabled,omitempty"`
 	EnabledHostNames          *[]string                  `json:"enabledHostNames,omitempty"`
-	AvailabilityState         SiteAvailabilityState      `json:"availabilityState,omitempty"`
+	AvailabilityState         *int32                     `json:"availabilityState,omitempty"`
 	HostNameSslStates         *[]HostNameSslState        `json:"hostNameSslStates,omitempty"`
 	ServerFarmID              *string                    `json:"serverFarmId,omitempty"`
 	LastModifiedTimeUtc       *date.Time                 `json:"lastModifiedTimeUtc,omitempty"`
