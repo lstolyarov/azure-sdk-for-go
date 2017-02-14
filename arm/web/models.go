@@ -2293,9 +2293,9 @@ type SiteConfigProperties struct {
 	JavaContainer                *string                  `json:"javaContainer,omitempty"`
 	JavaContainerVersion         *string                  `json:"javaContainerVersion,omitempty"`
 	AppCommandLine               *string                  `json:"appCommandLine,omitempty"`
-	ManagedPipelineMode          ManagedPipelineMode      `json:"managedPipelineMode,omitempty"`
+	ManagedPipelineMode          *int32                   `json:"managedPipelineMode,omitempty"`
 	VirtualApplications          *[]VirtualApplication    `json:"virtualApplications,omitempty"`
-	LoadBalancing                SiteLoadBalancing        `json:"loadBalancing,omitempty"`
+	LoadBalancing                *int32						        `json:"loadBalancing,omitempty"`
 	Experiments                  *Experiments             `json:"experiments,omitempty"`
 	Limits                       *SiteLimits              `json:"limits,omitempty"`
 	AutoHealEnabled              *bool                    `json:"autoHealEnabled,omitempty"`
